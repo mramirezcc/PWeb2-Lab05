@@ -1,5 +1,4 @@
 from interpreter import draw
 from chessPictures import *
-pic = Picture(knight.negative())
-pic = pic.join(king)
+pic = rock.verticalMirror().negative().join(king).join(bishop).negative()
 draw(pic)

@@ -16,12 +16,12 @@ class Picture:
     vertical = []
     for value in self.img:
       vertical.append(value[::-1])
-    return vertical
+    return Picture(vertical)
 
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen """
     horizontal = self.img[::-1]
-    return horizontal
+    return Picture(horizontal)
 
   def negative(self):
     """ Devuelve un negativo de la imagen """
@@ -30,13 +30,13 @@ class Picture:
       #Aplicamos la función _invColor() en cada caracter de value
       aux = "".join(map(self._invColor, value))
       negative.append(aux)
-    return negative
+    return Picture(negative)
 
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
-    joined = map(lambda a, b: a + b, self.img, p.img)
-    return list(joined)
+    aux = map(lambda a, b: a + b, self.img, p.img)
+    return Picture(list(aux))
 
   def up(self, p):
     return Picture(None)
