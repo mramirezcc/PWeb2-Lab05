@@ -35,7 +35,8 @@ class Picture:
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
-    return Picture(None)
+    joined = map(lambda a, b: a + b, self.img, p.img)
+    return list(joined)
 
   def up(self, p):
     return Picture(None)
