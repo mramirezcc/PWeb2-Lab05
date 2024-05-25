@@ -35,11 +35,13 @@ class Picture:
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
-    aux = map(lambda a, b: a + b, self.img, p.img)
-    return Picture(list(aux))
+    aux = list(map(lambda a, b: a + b, self.img, p.img))
+    return Picture(aux)
 
   def up(self, p):
-    return Picture(None)
+    """ Devuelve una nueva figura poniendo la figura p debajo de la figura actual """
+    aux = self.img + p.img
+    return Picture(aux)
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
