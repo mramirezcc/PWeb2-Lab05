@@ -35,24 +35,30 @@ class Picture:
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
-    aux = list(map(lambda a, b: a + b, self.img, p.img))
-    return Picture(aux)
+    join = list(map(lambda a, b: a + b, self.img, p.img))
+    return Picture(join)
 
   def up(self, p):
     """ Devuelve una nueva figura poniendo la figura p debajo de la figura actual """
-    aux = self.img + p.img
-    return Picture(aux)
+    up = self.img + p.img
+    return Picture(up)
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
-    aux = p.img + self.img
-    return Picture(aux)
+    under = p.img + self.img
+    return Picture(under)
   
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
         la cantidad de veces que indique el valor de n """
-    return Picture(None)
+    hRepeat = []
+    for value in self.img:
+      str = ""
+      for i in range (n):
+        str += value
+      hRepeat.append(str)
+    return Picture(hRepeat)
 
   def verticalRepeat(self, n):
     return Picture(None)
