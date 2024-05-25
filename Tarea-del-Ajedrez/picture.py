@@ -48,7 +48,7 @@ class Picture:
     a la figura actual"""
     under = []
     for i in range (len(self.img)):
-      aux = list("".join(map(lambda a, b: a if a != ' ' else b, self.img[i], p.img[i])))
+      aux = list("".join(map(lambda a, b: a if a != ' ' else b, p.img[i], self.img[i])))
       under.append(aux)
     return Picture(under)
   

@@ -1,4 +1,4 @@
 from interpreter import draw
 from chessPictures import *
-pic = knight.under(square)
+pic = square.under(knight)
 draw(pic)
