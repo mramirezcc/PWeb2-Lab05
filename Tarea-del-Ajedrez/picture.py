@@ -54,10 +54,10 @@ class Picture:
         la cantidad de veces que indique el valor de n """
     hRepeat = []
     for value in self.img:
-      str = ""
+      aux = ""
       for i in range (n):
-        str += value
-      hRepeat.append(str)
+        aux += value
+      hRepeat.append(aux)
     return Picture(hRepeat)
 
   def verticalRepeat(self, n):
